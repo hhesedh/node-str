@@ -15,7 +15,7 @@ mongoose
 		{ useNewUrlParser: true }
 	)
 	.catch(err => {
-		console.log(err);
+		console.log(`${err}`);
 	});
 
 // Carrega os Models
