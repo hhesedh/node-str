@@ -1,0 +1,6 @@
+200 - ok
+201 - created
+400 - bad request
+401 - not authenticated
+403 - access denied
+500 - internal server error
