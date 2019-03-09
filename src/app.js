@@ -1,19 +1,19 @@
 "use strict";
 
+// imports
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const config = require("./config");
+
+
 const app = express();
-//const router = express.Router();
 
 // conecta ao banco
 mongoose.set('useCreateIndex', true);
 mongoose
-	.connect(
-		"mongodb+srv://hhesedh:live0491@cluster0-mudhj.mongodb.net/test?retryWrites=true",
-		{ useNewUrlParser: true }
-	)
+	.connect(config.connectionString, { useNewUrlParser: true })
 	.catch(err => {
 		console.log(`${err}`);
 	});
